@@ -1,0 +1,7 @@
+image:
+  - Visual Studio 2019
+  - Ubuntu1804
+
+build_script:
+  - cmd: .\build.cmd
+  - sh: ./build.cmd

@@ -1,0 +1,13 @@
+language: csharp
+os:
+  - osx
+  - linux
+
+sudo: required
+dist: trusty
+
+git:
+  depth: false
+
+script:
+  - ./build.sh

@@ -1,0 +1,37 @@
+stages:
+  - stage: ubuntu_latest
+    displayName: 'ubuntu-latest'
+    pool:
+      vmImage: 'ubuntu-latest'
+    jobs:
+      - job: Build
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: './build.cmd'
+            env:
+              Secret: $(Secret)
+  - stage: windows_latest
+    displayName: 'windows-latest'
+    pool:
+      vmImage: 'windows-latest'
+    jobs:
+      - job: Build
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: './build.cmd'
+            env:
+              Secret: $(Secret)
+  - stage: macOS_latest
+    displayName: 'macOS-latest'
+    pool:
+      vmImage: 'macOS-latest'
+    jobs:
+      - job: Build
+        steps:
+          - task: CmdLine@2
+            inputs:
+              script: './build.cmd'
+            env:
+              Secret: $(Secret)

@@ -1,0 +1,29 @@
+name: build
+
+on: [push]
+
+jobs:
+  windows-latest:
+    name: windows-latest
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: ./build.cmd
+        env:
+          Secret: ${{ secrets.SECRET }}
+  ubuntu-latest:
+    name: ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: ./build.cmd
+        env:
+          Secret: ${{ secrets.SECRET }}
+  macOS-latest:
+    name: macOS-latest
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: ./build.cmd
+        env:
+          Secret: ${{ secrets.SECRET }}
