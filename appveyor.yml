@@ -5,3 +5,7 @@ image:
 build_script:
   - cmd: .\build.cmd
   - sh: ./build.cmd
+
+environment:
+  Secret:
+    secure: rnSBZeIuiq0YLOJcPvIeC89pPo5XagY2qDXsh+zKpFk=
