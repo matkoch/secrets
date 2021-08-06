@@ -12,8 +12,7 @@ stages:
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
-              echo $(HOME)
-              echo ${{ variables.home }}
+              echo $(HOME)$(USERPROFILE)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -32,8 +31,7 @@ stages:
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
-              echo $(HOME)
-              echo ${{ variables.home }}
+              echo $(HOME)$(USERPROFILE)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -52,8 +50,7 @@ stages:
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
-              echo $(HOME)
-              echo ${{ variables.home }}
+              echo $(HOME)$(USERPROFILE)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
