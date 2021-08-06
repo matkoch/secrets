@@ -13,6 +13,7 @@ stages:
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
               echo $(HOME)
+              echo ${{ variables.home }}
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -32,6 +33,7 @@ stages:
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
               echo $(HOME)
+              echo ${{ variables.home }}
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -51,6 +53,7 @@ stages:
               echo $(System.DefaultWorkingDirectory)
               echo $(System.WorkFolder)
               echo $(HOME)
+              echo ${{ variables.home }}
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
