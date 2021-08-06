@@ -6,6 +6,7 @@ stages:
     jobs:
       - job: Build
         steps:
+          - script: echo $(Pipeline.Workspace)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -18,6 +19,7 @@ stages:
     jobs:
       - job: Build
         steps:
+          - script: echo $(Pipeline.Workspace)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -30,6 +32,7 @@ stages:
     jobs:
       - job: Build
         steps:
+          - script: echo $(Pipeline.Workspace)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
