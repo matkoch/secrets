@@ -11,6 +11,7 @@ stages:
               echo $(Agent.HomeDirectory)
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
+              echo $(System.WorkFolder)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -28,6 +29,7 @@ stages:
               echo $(Agent.HomeDirectory)
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
+              echo $(System.WorkFolder)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -45,6 +47,7 @@ stages:
               echo $(Agent.HomeDirectory)
               echo $(Agent.WorkFolder)
               echo $(System.DefaultWorkingDirectory)
+              echo $(System.WorkFolder)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
