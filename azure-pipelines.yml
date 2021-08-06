@@ -6,7 +6,11 @@ stages:
     jobs:
       - job: Build
         steps:
-          - script: echo $(Pipeline.Workspace)
+          - script: |
+            echo $(Pipeline.Workspace)
+            echo $(Agent.HomeDirectory)
+            echo $(Agent.WorkFolder)
+            echo $(System.DefaultWorkingDirectory)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -19,7 +23,11 @@ stages:
     jobs:
       - job: Build
         steps:
-          - script: echo $(Pipeline.Workspace)
+          - script: |
+            echo $(Pipeline.Workspace)
+            echo $(Agent.HomeDirectory)
+            echo $(Agent.WorkFolder)
+            echo $(System.DefaultWorkingDirectory)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
@@ -32,7 +40,11 @@ stages:
     jobs:
       - job: Build
         steps:
-          - script: echo $(Pipeline.Workspace)
+          - script: |
+            echo $(Pipeline.Workspace)
+            echo $(Agent.HomeDirectory)
+            echo $(Agent.WorkFolder)
+            echo $(System.DefaultWorkingDirectory)
           - task: CmdLine@2
             inputs:
               script: './build.cmd'
